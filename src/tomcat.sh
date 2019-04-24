@@ -3,7 +3,7 @@ echo CATALINA_BASE is set to ${CATALINA_BASE}
 echo CATALINA_HOME is set to ${CATALINA_HOME}
 
 CATALINA_OPTS='
-	-Djava.rmi.server.hostname=127.0.0.1 \
+-Djava.rmi.server.hostname=127.0.0.1 \
 	-Dcom.sun.management.jmxremote= \
 	-Dcom.sun.management.jmxremote.port=1812 \
 	-Dcom.sun.management.jmxremote.ssl=false \
@@ -14,7 +14,7 @@ CATALINA_OPTS='
 	-Dcatalina.base="${CATALINA_BASE}" \
 	-Dcatalina.home="${CATALINA_HOME}" \
 	-Djava.endorsed.dirs="${CATALINA_HOME}/endorsed"
-	'
+'
 
 umask 0000
 
@@ -42,7 +42,7 @@ run() {
 		init
 	fi
 
-	/bin/sh ${CATALINA_HOME}/bin/catalina.sh run 
+	/bin/sh ${CATALINA_HOME}/bin/catalina.sh run
 }
 
 usage() {
@@ -52,13 +52,13 @@ usage() {
 }
 
 case $1 in
-    run)
+	run)
 		run
-    ;;
-    init)
+		;;
+	init)
 		init
-    ;;
-    *)
-   		usage 
-    ;;
+		;;
+	*)
+		usage
+		;;
 esac

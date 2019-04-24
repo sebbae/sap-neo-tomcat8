@@ -8,4 +8,4 @@ services:
     volumes:
      - ./tomcat:/tomcat
      - ./example/neo/target/neo:/tomcat/webapps/neo
-    image: "sap-neo-tomcat8"
+       #image: "sap-neo-tomcat8"
