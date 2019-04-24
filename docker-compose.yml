@@ -1,0 +1,11 @@
+version: '3'
+services:
+  tomcat8:
+    build: .
+    ports:
+     - "8080:8080"
+     - "8443:8443"
+    volumes:
+     - ./tomcat:/tomcat
+     - ./example/neo/target/neo:/tomcat/webapps/neo
+    image: "sap-neo-tomcat8"
