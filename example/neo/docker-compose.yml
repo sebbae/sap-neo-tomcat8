@@ -1,0 +1,13 @@
+version: '3'
+services:
+  tomcat8:
+    image: sap-neo-tomcat8
+    ports:
+     - "8080:8080"
+     - "8443:8443"
+    volumes:
+     - ./target/neo.war:/webapps/neo.war
+     - .tomcat/config_master/connection_data:/tomcat/config_master/connection_data
+     - .tomcat/config_master/com.sap.js.logging:/tomcat/config_master/com.sap.js.logging
+     - .tomcat/config_master/com.sap.security.um.provider.neo.local:/tomcat/config_master/com.sap.security.um.provider.neo.local
+     - .tomcat/config_master/com.sap.core.jpaas.security.um.service:/tomcat/config_master/com.sap.core.jpaas.security.um.service

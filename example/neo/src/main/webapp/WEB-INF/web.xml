@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" version="2.5"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+     http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+	<display-name>SAP Neo Tomcat 8 - Example</display-name>
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>Protected Area</web-resource-name>
+			<url-pattern>/service</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>ADMIN_ROLE</role-name>
+		</auth-constraint>
+	</security-constraint>
+
+	<login-config>
+		<auth-method>BASIC</auth-method>
+	</login-config>
+
+	<security-role>
+		<description>All SAP Cloud Platform users</description>
+		<role-name>Everyone</role-name>
+	</security-role> 
+	<security-role>
+		<description>Administrator role</description>
+		<role-name>ADMIN_ROLE</role-name>
+	</security-role>
+</web-app>
