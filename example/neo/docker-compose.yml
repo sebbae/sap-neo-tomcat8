@@ -10,4 +10,3 @@ services:
      - .tomcat/config_master/connection_data:/tomcat/config_master/connection_data
      - .tomcat/config_master/com.sap.js.logging:/tomcat/config_master/com.sap.js.logging
      - .tomcat/config_master/com.sap.security.um.provider.neo.local:/tomcat/config_master/com.sap.security.um.provider.neo.local
-     - .tomcat/config_master/com.sap.core.jpaas.security.um.service:/tomcat/config_master/com.sap.core.jpaas.security.um.service
