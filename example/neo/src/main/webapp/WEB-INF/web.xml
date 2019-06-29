@@ -13,7 +13,7 @@
 	<security-constraint>
 		<web-resource-collection>
 			<web-resource-name>Protected Area</web-resource-name>
-			<url-pattern>/service</url-pattern>
+			<url-pattern>/service/*</url-pattern>
 		</web-resource-collection>
 		<auth-constraint>
 			<role-name>ADMIN_ROLE</role-name>
@@ -21,7 +21,7 @@
 	</security-constraint>
 
 	<login-config>
-		<auth-method>BASIC</auth-method>
+		<auth-method>FORM</auth-method>
 	</login-config>
 
 	<security-role>
